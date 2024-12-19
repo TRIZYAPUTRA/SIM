@@ -1,0 +1,15 @@
+datasource db {
+  provider = "mysql" // Atau MySQL, SQLite, dll.
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// model User {
+//   id        Int      @id @default(autoincrement())
+//   akun      Int      
+//   password  String
+//   type      String
+// }
