@@ -1,0 +1,176 @@
+/* Styling untuk container utama */
+.profil {
+    position: absolute;
+    display: flex;
+    width: 200vh;
+    top: 0vh;
+    left: 0;
+    margin-left: 20vh;
+    flex-direction: column;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Styling untuk judul */
+  .profil h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling untuk form */
+  .formprofile {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 200vh;
+    box-sizing: border-box;
+  }
+  .allinpute{
+    gap: 4vh;
+    display: flex;
+    float: left;
+    width: 100%;
+    max-width: 85vh;
+  }
+  .kanan{
+    width: 100%;
+    max-width: 80vh;
+  }
+  .kiri{
+    width: 100%;
+    max-width: 80vh;
+  }
+  .saveBtn,.editBtn{
+    width: 100%;
+    max-width: 84vh;
+  }
+  /* Styling label input */
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Styling untuk input dan text area */
+  .inpute[type="text"],
+  .inpute[type="email"],
+  .inpute[type="file"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #fff; /* pastikan latar belakang input putih */
+    z-index: 1; /* pastikan input berada di depan */
+  }
+  
+  /* Efek saat input fokus */
+  .inpute[type="text"]:focus,
+  .inpute[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Styling untuk tombol submit */
+  .buttonsubmit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    z-index: 2; /* memastikan tombol tetap bisa di-klik */
+  }
+  
+  /* Efek saat hover pada tombol */
+  .buttonsubmit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling untuk input file */
+  .inpute[type="file"] {
+    background-color: #f8f8f8;
+    border: 1px dashed #ccc;
+    padding: 5px;
+    cursor: pointer; /* pastikan kursor berubah saat hover */
+    display: block; /* pastikan input file ditampilkan sebagai blok */
+    z-index: 1; /* pastikan input file tidak tertutup elemen lain */
+  }
+  
+  .inpute[type="file"]:hover {
+    border-color: #007bff;
+  }
+  
+  .buttonsubmit[type="submit"] {
+    margin-top: 20px;
+  }
+
+  .fotoprof{
+    margin-top: 2vh;
+    width: 13vh;
+    height: 13vh;
+    border-radius: 50%;
+    border: rgb(255, 255, 255) solid 0.5vh;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px;
+    object-fit: cover;
+  }
+  
+  /* Styling untuk responsif (mobile-first) */
+  @media (max-width: 768px) {
+    .profil {
+      padding: 20px;
+    }
+  
+    form {
+      padding: 20px;
+    }
+  
+    .profil h1 {
+      font-size: 30px;
+    }
+  }
+  
+  .successPopup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .successPopup button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .closePopup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  

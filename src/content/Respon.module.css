@@ -1,0 +1,108 @@
+.pesanContainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 20vh;
+}
+
+.title, .subTitle {
+  color: #333;
+}
+
+.messagesSection {
+  margin-bottom: 20px;
+}
+
+.messagesList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.messageItem {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.sent {
+  background-color: #e6f7ff;
+  text-align: right;
+}
+
+.received {
+  background-color: #f1f1f1;
+  text-align: left;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.sendButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+.newMessage {
+  margin-top: 20px;
+}
+.table {
+  width: 68vh;
+  border-collapse: collapse;
+  font-size: small;
+  color: rgb(0, 0, 0);
+}
+
+.table th, .table td {
+  padding: 3px 3px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #4CAF50;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  border-radius: 4px;
+}
+.editBtn{
+  align-items: center;
+  margin: 3px;
+}
+.complaintsTable h4{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+  color: #555;
+}

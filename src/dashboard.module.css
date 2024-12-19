@@ -1,0 +1,264 @@
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    overflow: auto;
+    
+}
+.background img{
+  object-fit: cover;
+}
+
+.putih{
+  position:fixed;
+  background-attachment: fixed;
+   background-color: aliceblue;
+   height: 100%;
+   width: 100%;
+   opacity: 70%;
+}   
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -37vh; /* Mulai di luar layar */
+  width: 35vh;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: left 0.3s ease; /* Animasi saat membuka/menutup */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.sidebar.open {
+  left: 0; /* Tampilkan sidebar */
+}
+
+.toggleBtn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  padding: 10px 20px;
+  margin-left: -20px;
+  text-align:right ;
+  font-size: 16px;
+  width: 14vh;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  margin-left: 27vh;
+  padding-left: 1vh;
+  width: 15%;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  border: none; 
+  outline: none;
+  transition: color 0.3s ease; 
+}
+
+.closeBtn:hover {
+  background-color: transparent; 
+  outline: none; 
+}
+
+.closeBtn:focus {
+  transform: scale(0.95);
+  border: none;
+  outline: none; 
+}
+.icon{
+  font-size: larger;
+  width: 5vh;
+}
+
+.list{
+  margin-top: -3vh;
+  border-bottom: 2px solid;
+}
+ul{
+  list-style: none;
+  margin-left: -5vh;
+}
+.btnlist{
+  font-size: 3vh;
+  color: white;
+  text-align: left;
+  margin-top: 1vh;
+  width: 100%;
+  left: 0;
+  outline:none;
+  border:none;
+  border-style: none;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+}
+.btnlist:hover{
+  outline:none;
+  border:none;
+  border-style: none;
+}
+.btnlist:focus{
+  outline:none;
+  border:none;
+  border-style: none;
+}
+.txtlist{
+  font-size: medium;
+  padding-left: 4vh;
+}
+.profile{
+  height: 15vh;
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+}
+.fotoP{
+  margin-top: -30px;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  border: rgb(255, 255, 255) solid 0.5vh;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+  object-fit: cover;
+}
+.logout{
+  text-align: left;
+  color: white;
+  margin-top: 1vh;
+  width: 100%;
+  left: 0;
+  outline:none;
+  border:none;
+  border-style: none;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+}
+.iconlo{
+  font-size: x-large;
+  padding-right: 20px;
+}
+.logout:hover{
+  outline:none;
+  border:none;
+  border-style: none;
+}
+.logout:focus{
+  outline:none;
+  border:none;
+  border-style: none;
+}
+.dashboardd{
+  width: auto;
+  height: auto;
+  overflow: auto;
+  position: relative;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  top: 40vh;
+  left: -30vh;
+  color: black;
+  z-index: 1;
+}
+.dashboarddd{
+  width: auto;
+  height: auto;
+  position: relative;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  top: -30vh;
+  left: -30vh;
+  color: black;
+  z-index: 1;
+}
+.kotak{
+  display: flex;
+  float: left;
+  gap: 7vh;
+}
+.lpsl{
+  width: 40vh;
+  height: 10vh;
+  background-color: rgb(117, 72, 10);
+  opacity: 100%;
+  font-size: larger;
+  display: flex;
+  padding-left: 4vh;
+  gap: 1vh;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+.lpsy{
+  width: 40vh;
+  height: 10vh;
+  background-color: rgb(152, 0, 0);
+  opacity: 100%;
+  font-size: larger;
+  display: flex;
+  padding-left: 4vh;
+  gap: 1vh;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+.lpsy::before{
+  content:"Laporan Saya :";
+  color: rgb(254, 254, 254);
+  opacity: 100%;
+}
+.lpsl::before{
+  content:"Laporan Selesai :";
+  color: rgb(254, 254, 254);
+  opacity: 100%;
+}
+.lpsm{
+  width: 40vh;
+  height: 10vh;
+  background-color: rgb(152, 0, 0);
+  opacity: 100%;
+  font-size: larger;
+  display: flex;
+  padding-left: 4vh;
+  gap: 1vh;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+.lpsm::before{
+  content:"Laporan Masuk :";
+  color: rgb(254, 254, 254);
+  opacity: 100%;
+}
+.gambarA{
+  position: relative;
+  /* z-index: -10; */
+}
+.gambaraa{
+  margin-top: 20px;
+  height: 134vh;
+}

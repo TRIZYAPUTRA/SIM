@@ -1,0 +1,252 @@
+/* Styling untuk container utama */
+.pengaduanContainer {
+    position: absolute;
+    display: flex;
+    width: 170vh; /* Increase the width to allow both sections to fit */
+    top: 0;
+    left: 10vh;
+    margin-left: 10vh; /* Adjusted margin for better centering */
+    flex-direction: row; /* Arrange form and upload section side by side */
+    justify-content: space-between; /* Distribute space between the form and upload section */ /* Align items at the top */
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Styling untuk judul */
+  .pengaduanContainer h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  /* Styling untuk form */
+  .formp{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 4vh;
+  }
+  .formGroup {
+    border-radius: 10px;
+    width: 100%; /* Form will take up 60% of the container */
+    box-sizing: border-box;
+    left: 0;
+  }
+  .formp .kanan{
+    flex-direction: column;
+    width: 50vh;
+    overflow: auto;
+  }
+  .formp .kiri{
+    flex-direction: column;
+    width: 50vh;
+  }
+  
+  /* Styling label input */
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Styling untuk input dan text area */
+  .inpute[type="text"],
+  .inpute[type="email"],
+  .inpute[type="file"],
+  .textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #333;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #fff; /* pastikan latar belakang input putih */
+    z-index: 1; /* pastikan input berada di depan */
+  }
+  .textarea{
+    margin-top: -3px;
+    resize: vertical;
+    overflow-x: auto;
+  }
+  
+  /* Efek saat input fokus */
+  .inpute[type="text"]:focus,
+  .inpute[type="email"]:focus,
+  .textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Styling untuk tombol submit */
+  .buttonsubmit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    z-index: 2; /* memastikan tombol tetap bisa di-klik */
+  }
+  
+  /* Efek saat hover pada tombol */
+  .buttonsubmit:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling untuk input file */
+  .inputFile {
+    background-color: #000000;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    width: 93%;
+    cursor: pointer; /* pastikan kursor berubah saat hover */
+    display: block; /* pastikan input file ditampilkan sebagai blok */
+    z-index: 1; /* pastikan input file tidak tertutup elemen lain */
+  }
+  
+  .inputFile:hover {
+    border-color: #007bff;
+  }
+  
+  /* Styling untuk image preview */
+  .photoPreview {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .previewImage {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+  }
+  
+  /* Styling untuk responsif (mobile-first) */
+  @media (max-width: 768px) {
+    .pengaduanContainer {
+      flex-direction: row; /* On small screens, stack the form and upload section vertically */
+      padding: 20px;
+      margin-left: 3vh;
+    }
+  
+    .formPengaduan {
+      width: 100%; /* Form takes full width on small screens */
+      padding: 20px;
+    }
+  }
+  
+  .uploadSection {
+    width: 100%; /* The upload section takes up 35% of the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents inside */
+    justify-content: flex-start;
+  }
+  
+  /* Container for file input and image preview */
+  .fileUploadContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .photoPreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .previewImage {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+  }
+  
+  .successPopup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .successPopup button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .closePopup {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .submitBtn{
+    margin-top: 3vh;
+    left: 0;
+    width: 100%;
+  }
+
+  .table {
+    width: 68vh;
+    border-collapse: collapse;
+    font-size: small;
+    color: rgb(0, 0, 0);
+  }
+  
+  .table th, .table td {
+    padding: 3px 3px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+  }
+  .editBtn{
+    align-items: center;
+    margin: 3px;
+  }
+  .complaintsTable h4{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+    color: #555;
+  }
