@@ -3,11 +3,12 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://simapp.infinityfreeapp.com/",
+  "homepage": "https://github.com/TRIZYAPUTRA/SIM.git",
   "scripts": {
     "dev": "concurrently \"vite\" \"nodemon src/backend/server.js\"",
     "build": "vite build",
     "lint": "eslint .",
+    "serve": "serve -s build",
     "start": "node src/backend/server.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
