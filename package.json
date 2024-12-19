@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "http://simapp.infinityfreeapp.com/",
   "scripts": {
+    "dev": "concurrently \"vite\" \"nodemon src/backend/server.js\"",
     "build": "vite build",
     "lint": "eslint .",
     "start": "node src/backend/server.js",
