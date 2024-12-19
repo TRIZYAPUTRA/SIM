@@ -1,4 +1,3 @@
-import dotenv from 'dotenv';
 import express from 'express';
 import mysql from 'mysql2';
 import bodyParser from 'body-parser';
@@ -6,7 +5,6 @@ import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
 
-dotenv.config({ path: './.env' }); 
 
 const app = express();
 const port = 5000;
@@ -18,11 +16,11 @@ app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
 // Koneksi ke MySQL
 const db = mysql.createConnection({ 
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.PORT,
+  host: "mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com",
+  user: "avnadmin",
+  password: "AVNS_NlALO0ONDh4mfDAqt9b",
+  database: "sim_app",
+  port: "3157",
   ssl: {
     rejectUnauthorized: false,  // Menonaktifkan verifikasi sertifikat
   },
