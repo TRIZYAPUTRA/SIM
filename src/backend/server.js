@@ -21,8 +21,7 @@ const db = mysql.createConnection({
   password: "AVNS_NlALO0ONDh4mfDAqt9b",
   database: "sim_app",
   port: "3157",
-  ssl: { rejectUnauthorized: false },
-  connectTimeout: 10000,  // Menonaktifkan verifikasi sertifikat
+   // Menonaktifkan verifikasi sertifikat
   },
 });
 
