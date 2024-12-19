@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payload
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
 // Koneksi ke MySQL
-const db = mysql.createConnection({
+const db = mysql.createConnection({ 
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
