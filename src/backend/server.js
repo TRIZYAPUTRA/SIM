@@ -21,7 +21,9 @@ const db = mysql.createConnection({
   password: "AVNS_NlALO0ONDh4mfDAqt9b",
   database: "sim_app",
   port: 3157,
-  connectTimeout: 20000, // Timeout dalam milidetik
+  connectTimeout: 30000,  // Set timeout koneksi lebih lama
+  acquireTimeout: 30000,  // Set timeout saat menunggu koneksi dari pool
+  waitForConnections: true,  // Tunggu sampai koneksi tersedia // Timeout dalam milidetik
   ssl: {
     ca: `-----BEGIN CERTIFICATE-----
 MIIEQTCCAqmgAwIBAgIUUUbOHRLIlMEj2nK9f84T8th4Hc8wDQYJKoZIhvcNAQEM
