@@ -25,11 +25,11 @@ function Pengaduan_m() {
     setUserId(storedUserId);
 
     if (storedUserId) {
-      axios.get(`http://localhost:5000/profile/${storedUserId}`)
+      axios.get(`https://sim-production-ed22.up.railway.app:5000/profile/${storedUserId}`)
         .then(response => {
           const { name, nim, contact, fakultas, prodi, email } = response.data;
           setComplaint({ ...complaint, name, nim, contact, fakultas, prodi, email });
-          axios.get(`http://localhost:5000/complaints/${nim}`)
+          axios.get(`https://sim-production-ed22.up.railway.app:5000/complaints/${nim}`)
           .then(complaintResponse => {
             setComplaintsList(complaintResponse.data);
           })
@@ -74,7 +74,7 @@ function Pengaduan_m() {
     setUserId(storedUserId);
 
     if (storedUserId) {
-      axios.get(`http://localhost:5000/profile/${storedUserId}`)
+      axios.get(`https://sim-production-ed22.up.railway.app:5000/profile/${storedUserId}`)
         .then(response => {
           const { name, nim, contact, fakultas, prodi, email } = response.data;
           setComplaint({ ...complaint, name, nim, contact, fakultas, prodi, email });
@@ -93,7 +93,7 @@ function Pengaduan_m() {
   }
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/complaints/delete/${id}`);
+      await axios.delete(`https://sim-production-ed22.up.railway.app:5000/complaints/delete/${id}`);
       alert('Data berhasil dihapus.');
       fetch(); // Refresh data
     } catch (error) {
@@ -109,7 +109,7 @@ function Pengaduan_m() {
     try {
       const { id, subject, description } = complaint;
   
-      await axios.put(`http://localhost:5000/complaints/${id}`, { subject, description });
+      await axios.put(`https://sim-production-ed22.up.railway.app:5000/complaints/${id}`, { subject, description });
   
       alert('Pengaduan berhasil diperbarui.');
   
@@ -126,7 +126,7 @@ function Pengaduan_m() {
       });
       
       // Refresh daftar pengaduan
-      const response = await axios.get(`http://localhost:5000/complaints/${complaint.nim}`);
+      const response = await axios.get(`https://sim-production-ed22.up.railway.app:5000/complaints/${complaint.nim}`);
       setComplaintsList(response.data);
     } catch (error) {
       console.error('Error updating complaint:', error);
@@ -142,7 +142,7 @@ function Pengaduan_m() {
     if (id) {
       // Pembaruan data
       try {
-        await axios.put(`http://localhost:5000/complaints/${id}`, { subject, description });
+        await axios.put(`https://sim-production-ed22.up.railway.app:5000/complaints/${id}`, { subject, description });
         alert('Pengaduan berhasil diperbarui.');
       } catch (error) {
         console.error('Error updating complaint:', error);
@@ -165,7 +165,7 @@ function Pengaduan_m() {
       }
   
       try {
-        await axios.post('http://localhost:5000/submit-complaint', formData, {
+        await axios.post('https://sim-production-ed22.up.railway.app:5000/submit-complaint', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         alert('Pengaduan berhasil ditambahkan.');
