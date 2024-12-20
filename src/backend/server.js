@@ -23,7 +23,7 @@ const db = mysql.createConnection({
   port: 3157,
   connectTimeout: 20000, // Timeout dalam milidetik
   ssl: {
-    ca: fs.readFileSync("./ca.pem"),
+    ca: fs.readFileSync(".../config/ca.pem"),
   },
 });
 
