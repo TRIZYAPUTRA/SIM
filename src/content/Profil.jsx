@@ -30,7 +30,7 @@ const nim_nrp = () => {
   
   useEffect(() => {
     if (userId) {
-      axios.get(`http://localhost:5000/profile/${userId}`)
+      axios.get(`https://sim-production-ed22.up.railway.app:5000/profile/${userId}`)
         .then((response) => {
           // Save profile data to state
           setProfile(response.data);
@@ -61,7 +61,7 @@ const nim_nrp = () => {
     formData.append('email', profile.email);
     formData.append('id', userId);
   
-    axios.post('http://localhost:5000/update-profile', formData)
+    axios.post('https://sim-production-ed22.up.railway.app:5000/update-profile', formData)
       .then((response) => {
         console.log('Profile updated successfully:', response.data);
         setShowSuccessPopup(true); // Show the success popup
