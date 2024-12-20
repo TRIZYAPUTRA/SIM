@@ -35,7 +35,7 @@ function Akun() {
 
   const fetchAkunList = () => {
     axios
-      .get('http://localhost:5000/akun/')
+      .get('https://sim-production-ed22.up.railway.app:5000/akun/')
       .then((response) => {
         setAkunList(response.data);
       })
@@ -69,7 +69,7 @@ function Akun() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/akun/delete/${id}`);
+      await axios.delete(`https://sim-production-ed22.up.railway.app:5000/akun/delete/${id}`);
       alert('Akun berhasil dihapus.');
       fetchAkunList();
     } catch (error) {
@@ -84,11 +84,11 @@ function Akun() {
     try {
       if (akun.id) {
         // Update akun
-        await axios.put(`http://localhost:5000/akun/${akun.id}`, akun);
+        await axios.put(`https://sim-production-ed22.up.railway.app:5000/akun/${akun.id}`, akun);
         alert('Akun berhasil diperbarui.');
       } else {
         // Tambah akun baru
-        await axios.post('http://localhost:5000/akun', akun);
+        await axios.post('https://sim-production-ed22.up.railway.app:5000/akun', akun);
         alert('Akun berhasil ditambahkan.');
       }
 
