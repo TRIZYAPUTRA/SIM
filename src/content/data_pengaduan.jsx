@@ -7,7 +7,7 @@ function Data_pengaduan() {
 
   // Ambil data pengaduan
   useEffect(() => {
-    axios.get('http://localhost:5000/complaints')
+    axios.get('https://sim-production-ed22.up.railway.app:5000/complaints')
       .then(response => {
         setComplaintsList(response.data);
       })
@@ -20,7 +20,7 @@ function Data_pengaduan() {
   const handleValidate = async (id, validasi) => {
     try {
       console.log('Validating complaint:', { id, validasi }); // Logging untuk debug
-      axios.put(`http://localhost:5000/complaints/validate/${id}`, { validasi });
+      axios.put(`https://sim-production-ed22.up.railway.app:5000/complaints/validate/${id}`, { validasi });
       alert(validasi === 1 ? 'Pengaduan berhasil divalidasi' : 'Pengaduan batal divalidasi');
   
       // Refresh data setelah validasi
