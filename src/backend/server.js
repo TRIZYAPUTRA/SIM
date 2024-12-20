@@ -15,21 +15,13 @@ app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payload
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
 // Koneksi ke MySQL
-const databaseUrl = "mysql://avnadmin:AVNS_NlALO0ONDh4mfDAqt9b@mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com:3157/sim_app?ssl-mode=REQUIRED";
+import mysql from "mysql2";
 
-const dbConfig = url.parse(databaseUrl);
-const [user, password] = dbConfig.auth.split(":");
+// URL koneksi
+const DATABASE_URL = "mysql://avnadmin:AVNS_NlALO0ONDh4mfDAqt9b@mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com:3157/sim_app?ssl-mode=REQUIRED";
 
-const db = mysql.createConnection({
-  host: dbConfig.hostname,
-  port: dbConfig.port,
-  user: user,
-  password: password,
-  database: dbConfig.pathname.replace("/", ""),
-  ssl: {
-    rejectUnauthorized: true, // Sesuaikan dengan kebutuhan
-  },
-});
+// Membuat koneksi database
+const db = mysql.createConnection(DATABASE_URL);
 
 const storage = multer.memoryStorage(); // Use memoryStorage to directly get the buffer in memory
 
