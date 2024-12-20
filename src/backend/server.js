@@ -21,8 +21,6 @@ const db = mysql.createConnection({
   password: "AVNS_NlALO0ONDh4mfDAqt9b",
   database: "sim_app",
   port: "3157",
-   // Menonaktifkan verifikasi sertifikat
-  },
 });
 
 const storage = multer.memoryStorage(); // Use memoryStorage to directly get the buffer in memory
