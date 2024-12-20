@@ -14,9 +14,6 @@ app.use(cors());
 app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payloads
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
-// Koneksi ke MySQL
-import mysql from "mysql2";
-
 // URL koneksi
 const DATABASE_URL = "mysql://avnadmin:AVNS_NlALO0ONDh4mfDAqt9b@mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com:3157/sim_app?ssl-mode=REQUIRED";
 
