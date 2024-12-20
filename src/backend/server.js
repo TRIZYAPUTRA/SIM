@@ -16,10 +16,14 @@ app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
 // URL koneksi
 const db = mysql.createConnection({
-  host: "mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com",
-  user: "avnadmin",
-  password: "AVNS_NlALO0ONDh4mfDAqt9b",
-  database: "sim_app",  
+  host: 'mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com',
+  user: 'avnadmin',
+  password: 'AVNS_NlALO0ONDh4mfDAqt9b',
+  database: 'sim_app',
+  port: 13157,
+  ssl: {
+    rejectUnauthorized: true
+  }
 });
 
 const storage = multer.memoryStorage(); // Use memoryStorage to directly get the buffer in memory
