@@ -15,15 +15,19 @@ app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payload
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
 // Koneksi ke MySQL
-const db = mysql.createConnection({ 
-  host: "mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com",
-  user: "avnadmin",
-  password: "AVNS_NlALO0ONDh4mfDAqt9b",
-  database: "sim_app",
-  port: 3157,
-  connectTimeout: 10000,
+const databaseUrl = "mysql://avnadmin:AVNS_NlALO0ONDh4mfDAqt9b@mysql-c965247-achyartrizyaputra-80ce.j.aivencloud.com:3157/sim_app?ssl-mode=REQUIRED";
+
+const dbConfig = url.parse(databaseUrl);
+const [user, password] = dbConfig.auth.split(":");
+
+const db = mysql.createConnection({
+  host: dbConfig.hostname,
+  port: dbConfig.port,
+  user: user,
+  password: password,
+  database: dbConfig.pathname.replace("/", ""),
   ssl: {
-    rejectUnauthorized: true, // Sesuaikan jika diperlukan
+    rejectUnauthorized: true, // Sesuaikan dengan kebutuhan
   },
 });
 
