@@ -22,6 +22,9 @@ const db = mysql.createConnection({
   database: "sim_app",
   port: 3157,
   connectTimeout: 10000,
+  ssl: {
+    rejectUnauthorized: true, // Sesuaikan jika diperlukan
+  },
 });
 
 const storage = multer.memoryStorage(); // Use memoryStorage to directly get the buffer in memory
@@ -39,8 +42,11 @@ const upload = multer({
 
 // Connect to MySQL
 db.connect((err) => {
-  if (err) throw err;
-  console.log('Connected to MySQL');
+  if (err) {
+    console.error("Error koneksi:", err);
+    return;
+  }
+  console.log("Berhasil terhubung ke database!");
 });
 
 // Endpoint login
