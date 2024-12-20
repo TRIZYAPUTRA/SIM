@@ -4,9 +4,24 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
+// Konfigurasi path untuk ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
+
+// Menyajikan file statis dari folder build (frontend)
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// Rute fallback untuk file index.html
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+});
+
 const port = 5000;
  
 // Middleware setup
