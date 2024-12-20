@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
-import fs from "fs";
+
 
 const app = express();
 const port = 5000;
