@@ -15,7 +15,7 @@ function Login() {
   }
 
   function login(username, password) {
-    fetch('http://localhost:5000/login', {
+    fetch('https://sim-production-ed22.up.railway.app:5000/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
