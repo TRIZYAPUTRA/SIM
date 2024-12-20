@@ -5,6 +5,7 @@ import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
 import fs from "fs";
+import path from "path";
 
 
 const app = express();
@@ -24,7 +25,7 @@ const db = mysql.createConnection({
   port: 3157,
   connectTimeout: 10000, // Timeout dalam milidetik
   ssl: {
-    ca: fs.readFileSync("./ca.pem"),
+    ca: fs.readFileSync(path.join(__dirname, 'ca.pem')),
   },
 });
 
