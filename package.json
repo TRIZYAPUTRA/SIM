@@ -12,6 +12,7 @@
     "start": "node src/backend/server.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
+    "install-prod": "npm install --omit=dev",
     "deploy": "sim-app -d build"
   },
   "dependencies": {
