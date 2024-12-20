@@ -5,8 +5,6 @@ import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
 import fs from "fs";
-import path from "path";
-
 
 const app = express();
 const port = 5000;
@@ -23,9 +21,9 @@ const db = mysql.createConnection({
   password: "AVNS_NlALO0ONDh4mfDAqt9b",
   database: "sim_app",
   port: 3157,
-  connectTimeout: 10000, // Timeout dalam milidetik
+  connectTimeout: 20000, // Timeout dalam milidetik
   ssl: {
-    ca: fs.readFileSync(path.join(__dirname, 'ca.pem')),
+    ca: fs.readFileSync("./ca.pem"),
   },
 });
 
