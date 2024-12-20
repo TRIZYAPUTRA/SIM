@@ -4,7 +4,6 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
 import bcrypt from 'bcrypt';
-import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
