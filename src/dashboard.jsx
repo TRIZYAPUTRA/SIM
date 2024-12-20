@@ -28,7 +28,7 @@ function Dashboard() {
 
     const userId = localStorage.getItem('userId');
     if (userId) {
-      fetch(`http://localhost:5000/profile/${userId}`)
+      fetch(`https://sim-production-ed22.up.railway.app:5000/profile/${userId}`)
         .then((response) => response.json())
         .then((data) => {
           setProfileData(data);
