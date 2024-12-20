@@ -13,13 +13,13 @@ function Dash_m() {
         const nim = localStorage.getItem('userNim'); // Pastikan ini benar-benar menyimpan NIM pengguna
         if (nim) {
           // Ambil total laporan
-          const totalResponse = await axios.get(`http://localhost:5000/complaints/count/${nim}`);
+          const totalResponse = await axios.get(`https://sim-production-ed22.up.railway.app:5000/complaints/count/${nim}`);
           console.log('Total complaints:', totalResponse.data.total); // Debugging
   
           setTotalComplaints(totalResponse.data.total); // Set total laporan ke state
   
           // Ambil laporan yang telah divalidasi (status = 1)
-          const resolvedResponse = await axios.get(`http://localhost:5000/complaints/resolved/${nim}`);
+          const resolvedResponse = await axios.get(`https://sim-production-ed22.up.railway.app:5000/complaints/resolved/${nim}`);
           console.log('Resolved complaints:', resolvedResponse.data.resolved); // Debugging
   
           setResolvedComplaints(resolvedResponse.data.resolved); // Set laporan selesai ke state
