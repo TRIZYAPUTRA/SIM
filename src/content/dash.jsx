@@ -9,11 +9,11 @@ function Dash() {
   useEffect(() => {
     const fetchComplaintData = async () => {
       try {
-        const totalResponse = await axios.get('http://localhost:5000/dashboard/total');
+        const totalResponse = await axios.get('https://sim-production-ed22.up.railway.app:5000/dashboard/total');
         console.log('Total response:', totalResponse); // Check the full response
         setTotalComplaints(totalResponse.data.total); // Correct key name
         
-        const resolvedResponse = await axios.get('http://localhost:5000/dashboard/resolved');
+        const resolvedResponse = await axios.get('https://sim-production-ed22.up.railway.app:5000/dashboard/resolved');
         console.log('Resolved response:', resolvedResponse); // Check the full response
         setResolvedComplaints(resolvedResponse.data.resolved); // Correct key name
         
