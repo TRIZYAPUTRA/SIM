@@ -10,7 +10,7 @@ import bcrypt from 'bcrypt';
 const app = express();
 const port = 5000;
 app.use(cors({
-  origin: 'http://localhost:5173', // Atur origin yang diizinkan
+  origin: ['http://localhost:5173','http://simapp.infinityfreeapp.com'], // Atur origin yang diizinkan
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Metode yang diizinkan
   allowedHeaders: ['Content-Type'], // Header yang diizinkan
   credentials: true 
