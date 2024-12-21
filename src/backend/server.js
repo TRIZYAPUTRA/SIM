@@ -9,9 +9,21 @@ import bcrypt from 'bcrypt';
 
 const app = express();
 const port = 5000;
- 
-// Middleware setup
-app.use(cors());
+const allowedOrigins = ['http://localhost:5173', 'https://example.com'];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin (e.g., mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.includes(origin)) {
+            return callback(null, true);
+        } else {
+            return callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payloads
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
 
