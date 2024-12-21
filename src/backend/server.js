@@ -9,7 +9,7 @@ import bcrypt from 'bcrypt';
 
 const app = express();
 const port = 5000;
-const allowedOrigins = ['http://localhost:5173', 'https://example.com'];
+const allowedOrigins = ['http://localhost:5173', 'http://simapp.infinityfreeapp.com'];
 
 app.use(cors({
     origin: function (origin, callback) {
