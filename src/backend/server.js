@@ -10,7 +10,7 @@ import bcrypt from 'bcrypt';
 const app = express();
 const port = 5000;
 app.use(cors({
-  origin: '*',  // Atau gunakan '*' untuk mengizinkan semua origin
+  origin: 'http://simapp.infinityfreeapp.com/',  // Atau gunakan '*' untuk mengizinkan semua origin
 }));
 app.use(bodyParser.json({ limit: '60mb' })); // For handling large image payloads
 app.use(bodyParser.urlencoded({ limit: '60mb', extended: true }));
